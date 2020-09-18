@@ -1,9 +1,6 @@
 import discord,asyncio,youtube_dl
 from discord.ext import commands
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 
@@ -11,7 +8,7 @@ load_dotenv()
 def get_prefix(bot, msg):
     """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
 
-    prefixes = ['s.'] #Your bot prefix(s)
+    prefixes = ['s.','t/','m!'] #Your bot prefix(s)
 
     return commands.when_mentioned_or(*prefixes)(bot, msg)
 
